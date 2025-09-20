@@ -1,3 +1,9 @@
-const inputCase = "L    Z" ;
+const inputTestCase = "L    Z" ;
+let indexInputTestCase = 0;
 
-console.log(inputCase.length);
+if(inputTestCase[indexInputTestCase] === "L"){
+    indexInputTestCase = indexInputTestCase + 1;
+}
+console.log(indexInputTestCase);
+
+console.log(inputTestCase.length);
