@@ -1,11 +1,14 @@
-const inputTestCase = " LZ" ;
+const inputTestCase = "L     L   Z" ;
 let spaceCount = 0;
 
 let indexInputTestCase = 0;    //change it when checking of l to l is done
 
 
 if(inputTestCase[indexInputTestCase] === "L"){
-    
+    indexInputTestCase = indexInputTestCase + 1;
+    while (inputTestCase[indexInputTestCase] !== "L" ) {
+        indexInputTestCase = indexInputTestCase + 1;
+    }
    
 }
 
