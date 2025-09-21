@@ -1,2 +1,2 @@
-const bal = 1000;
+const balance = 1000;
 console.log(balance)
