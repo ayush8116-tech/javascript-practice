@@ -11,23 +11,32 @@ let balance = 1000;
 
 let isInvalid = false;
 
-if (withdrawalAmount > balance){
-    isInvalid = true;
-}
 
 switch(initialInput){
-      
+    
     case "1":
-    let balanceAfterDeposit = balance + depositingAmount;
-     console.log(balanceAfterDeposit);
-    balance = balanceAfterDeposit;
+        if (depositingAmount < 0 ){
+            isInvalid = true;
+        }
+        if(isInvalid === false){
 
-    break;
-
-    case "2": 
+            let balanceAfterDeposit = balance + depositingAmount;
+            console.log("After depositing ",depositingAmount," the balance is " ,balanceAfterDeposit);
+            balance = balanceAfterDeposit;
+        } else {
+           console.log("Depositing amount of ",depositingAmount," is invalid");
+           
+        }
+        
+        break;
+        
+        case "2": 
+        if (withdrawalAmount > balance || withdrawalAmount < 0){
+            isInvalid = true;
+        }
     if(isInvalid === false){
         let balanceAfterWithdrawal = balance - withdrawalAmount;
-        console.log(balanceAfterWithdrawal);
+        console.log("After withdrawing ",withdrawalAmount," the balance is ",balanceAfterWithdrawal);
         balance = balanceAfterWithdrawal;
     } else{
         const errorMessage = "Insufficient Balance!!"
