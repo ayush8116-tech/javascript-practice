@@ -1,2 +1,6 @@
-const balance = 1000;
-console.log(balance)
+let balance = 1000;
+const deposit =  100;
+balance = balance + deposit;
+console.log(balance);
+
+
