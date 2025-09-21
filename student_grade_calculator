@@ -1,0 +1,8 @@
+const subject1 = 60;
+const subject2 = 70;
+const subject3 = 40;
+
+let sum = subject1 + subject2 + subject3;
+let average = sum / 3 ;
+
+console.log(average);
